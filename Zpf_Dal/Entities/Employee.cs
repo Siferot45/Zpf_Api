@@ -2,7 +2,7 @@
 
 namespace Zpf_Dal.Entities
 {
-    internal class Employee : NameBase
+    public class Employee : NameBase
     {
         public int Age { get; set; }
         public string? LastName { get; set; }
