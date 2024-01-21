@@ -18,7 +18,7 @@ namespace Zpf_Interfaces
 
         void Update(T entity);
 
-        void DeleteById(Guid id);
+        void DeleteById(T entity);
 
         Task<T> GetByIdAsync(Guid id, CancellationToken Cancel = default);
 
@@ -26,10 +26,8 @@ namespace Zpf_Interfaces
 
         Task<ICollection<T>> GetAllAsync(CancellationToken cancel = default);
 
-        Task<IQueryable<T>> QueryAsync(CancellationToken cancel = default);
-
         Task UpdateAsync(T entity, CancellationToken cancel = default); 
 
-        Task DeleteByIdAsync(Guid id, CancellationToken Cancel = default);
+        Task DeleteByIdAsync(T entity, CancellationToken Cancel = default);
     }
 }
